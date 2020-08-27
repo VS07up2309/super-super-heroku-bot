@@ -13,7 +13,23 @@ client.on('message', message => {
   }
 });
 
- client.on("message", (message) => {
+client.on("message", (message) => {
+    if (message.content.startsWith("!kick")) {
+        // Easy way to get member object though mentions.
+        var member= message.mentions.members.first();
+        
+        member.kick().then((member) => {
+            // Successmessage
+            message.channel.send(":wave: " + member.displayName + " has been successfully kicked :D ");
+console.log('KICKED');
+        }).catch(() => {
+             // Failmessage
+            message.channel.send("Access Denied");
+        });
+    }
+});
+
+client.on("message", (message) => {
     if (message.content.startsWith("!ban")) {
         // Easy way to get member object though mentions.
         var member= message.mentions.members.first();

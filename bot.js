@@ -36,6 +36,7 @@ return message.reply("Sorry, an error occurred.")
 }
 
 });
+});
 
 client.on("message", (message) => {
     if (message.content.startsWith("!ban")) {

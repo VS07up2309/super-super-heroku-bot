@@ -15,6 +15,8 @@ client.on('message', message => {
   }
 });
 
+if(msg.member.roles.has(moderatorRole.id)) {
+    // the user has the role
 client.on("message", (message) => {
     if (message.content.startsWith("!kick")) {
         // Easy way to get member object though mentions.
@@ -28,7 +30,11 @@ console.log('KICKED');
              // Failmessage
             message.channel.send("Access Denied");
         });
-    }
+    } else {
+
+return message.reply("Sorry, an error occurred.")
+}
+
 });
 
 client.on("message", (message) => {

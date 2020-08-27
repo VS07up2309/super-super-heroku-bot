@@ -20,7 +20,8 @@ client.on('message', message => {
         // ban
         member.ban().then((member) => {
             // Successmessage
-            message.channel.send(":wave: " + member.displayName + " has been successfully banned :point_right: ");
+            message.channel.send(":wave: " + member.displayName + " has been successfully banned :D ");
+console.log('BANNED' + member.displayName);
         }).catch(() => {
              // Failmessage
             message.channel.send("Access Denied");

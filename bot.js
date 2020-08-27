@@ -5,6 +5,8 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+let moderatorRole = message.guild.roles.get('748683300192911390');
+
 client.on('message', message => {
   // If the message is "ping"
   if (message.content === 'ping') {

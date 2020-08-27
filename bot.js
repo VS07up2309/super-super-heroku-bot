@@ -15,28 +15,21 @@ client.on('message', message => {
   }
 });
 
-if(msg.member.roles.has(moderatorRole.id)) {
-    // the user has the role
 client.on("message", (message) => {
-    if (message.content.startsWith("!kick")) {
-        // Easy way to get member object though mentions.
-        var member= message.mentions.members.first();
-        
-        member.kick().then((member) => {
-            // Successmessage
-            message.channel.send(":wave: " + member.displayName + " has been successfully kicked :D ");
-console.log('KICKED');
-        }).catch(() => {
-             // Failmessage
-            message.channel.send("Access Denied");
-        });
-    } else {
+     if (message.content.startsWith("!kick")) {
+         // Easy way to get member object though mentions.
+         var member= message.mentions.members.first();
 
-return message.reply("Sorry, an error occurred.")
-}
-
-});
-});
+         member.kick().then((member) => {
+             // Successmessage
+             message.channel.send(":wave: " + member.displayName + " has been successfully kicked :D ");
+ console.log('KICKED');
+         }).catch(() => {
+              // Failmessage
+             message.channel.send("Access Denied");
+         });
+     }
+ });
 
 client.on("message", (message) => {
     if (message.content.startsWith("!ban")) {

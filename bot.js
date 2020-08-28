@@ -4,6 +4,7 @@ const config = require('./config.json');
 
 const client = new Discord.Client();
 
+let spamCtrl = require('./addons/spamCtrl.js');
 
 client.on('ready', () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
@@ -25,7 +26,7 @@ client.on("guildDelete", guild => {
 
 
 
-let spamCtrl = require('./addons/spamCtrl.js');
+
 
  client.on('message', message => {
 if (message.content === '!spam') {  

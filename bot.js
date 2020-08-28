@@ -7,15 +7,20 @@ client.on('ready', () => {
 
 let spamCtrl = require('./spamCtrl');
 
-// 2 commands together make spamming work :)
-case '?SPAM':
-    spamCtrl.setChannel(message.channel);
+ client.on('message', message => {
+if (message.content === '!spam') {  
+ spamCtrl.setChannel(message.channel);
     spamCtrl.setStatus(true);
     break;
-case '?STOP-SPAM':
+}
+});
+
+client.on('message', message => {
+if (message.content === '!ss') {
     spamCtrl.setStatus(false);
     break;
-
+}
+});
 client.on('message', message => {
   // If the message is "ping"
   if (message.content === 'Ping') {

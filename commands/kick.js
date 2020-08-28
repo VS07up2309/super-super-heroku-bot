@@ -2,7 +2,7 @@ module.exports = {
 	name: 'ban',
 	description: 'Tag a member and ban them.',
 	guildOnly: true,
-	execute(message, args) {
+	execute(message) {
 		const args = message.content.split(' ').slice(1);
 		const user = message.mentions.users.first(); // returns the user object if an user mention exists
 const banReason = args.slice(1).join(' ');

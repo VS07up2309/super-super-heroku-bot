@@ -2,7 +2,8 @@ const fs = require('fs');
 
 const Discord = require('discord.js');
 
-var config = {"prefix":"!"};
+var config = new Object();
+config.prefix = "!"
 
 const client = new Discord.Client();
 

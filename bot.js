@@ -98,6 +98,10 @@ console.log('BANNED');
     }
 });
 
+if (command === 'ping') {
+	client.commands.get('ping').execute(message, args);
+}
+
   
 
 // THIS  MUST  BE  THIS  WAY

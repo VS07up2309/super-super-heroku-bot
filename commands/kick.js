@@ -13,6 +13,7 @@ module.exports = {
 			//Fail
 			message.channel.send("Keine Berechtigung");
 		});
+	});
 			
 		
 		

@@ -11,6 +11,8 @@ client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
+const cooldowns = new Discord.Collection();
+
 let spamCtrl = require('./addons/spamCtrl.js');
 
 for (const file of commandFiles) {
@@ -20,6 +22,8 @@ for (const file of commandFiles) {
 	// with the key as the command name and the value as the exported module
 	client.commands.set(command.name, command);
 }
+
+
 
 client.on('ready', () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);

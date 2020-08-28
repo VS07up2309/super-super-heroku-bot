@@ -4,8 +4,11 @@ const config = require('./config.json');
 
 const client = new Discord.Client();
 
+
 client.on('ready', () => {
     console.log('I am ready!');
+client.user.setActivity(`Use !help.`, {type: "playing"}); 
+
 });
 
 let spamCtrl = require('./spamCtrl');

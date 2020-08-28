@@ -14,7 +14,7 @@ module.exports = {
         }).catch(() => {
              // Failmessage
             message.channel.send("Keine Rechte");
-        });
+        };
     
 });
 	},

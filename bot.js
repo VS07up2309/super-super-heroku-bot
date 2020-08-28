@@ -12,6 +12,14 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 
 let spamCtrl = require('./addons/spamCtrl.js');
 
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
+
+	// set a new item in the Collection
+	// with the key as the command name and the value as the exported module
+	client.commands.set(command.name, command);
+}
+
 client.on('ready', () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
 client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);

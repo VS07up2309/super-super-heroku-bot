@@ -71,8 +71,8 @@ console.log('BANNED');
     }
 });
 
-client.user.setStatus('online')
-    client.user.setPresence({
+
+client.user.setPresence({
         game: {
             name: 'Use !help',
             type: "Playing",

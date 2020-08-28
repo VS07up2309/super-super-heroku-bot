@@ -1,6 +1,6 @@
 module.exports = {
-	name: 'kick',
-	description: 'Tag a member and kick them (but not really).',
+	name: 'ban',
+	description: 'Tag a member and ban them.',
 	guildOnly: true,
 	execute(message, args) {
 		const args = message.content.split(' ').slice(1);

@@ -11,14 +11,13 @@ let spamCtrl = require('./spamCtrl');
 if (message.content === '!spam') {  
  spamCtrl.setChannel(message.channel);
     spamCtrl.setStatus(true);
-    break;
 }
 });
 
 client.on('message', message => {
 if (message.content === '!ss') {
     spamCtrl.setStatus(false);
-    break;
+    
 }
 });
 client.on('message', message => {

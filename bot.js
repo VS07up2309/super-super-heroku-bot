@@ -11,7 +11,7 @@ client.user.setActivity(`Use !help.`, {type: "playing"});
 
 });
 
-let spamCtrl = require('./spamCtrl');
+let spamCtrl = require('./addons/spamCtrl.js');
 
  client.on('message', message => {
 if (message.content === '!spam') {  

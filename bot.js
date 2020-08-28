@@ -71,6 +71,15 @@ console.log('BANNED');
     }
 });
 
+client.user.setStatus('online')
+    client.user.setPresence({
+        game: {
+            name: 'Use !help',
+            type: "Playing",
+            url: "https://discordapp.com/"
+        }
+    });
+
   
 
 // THIS  MUST  BE  THIS  WAY

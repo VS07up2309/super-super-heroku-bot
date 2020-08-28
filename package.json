@@ -1,7 +1,7 @@
 {
-  "name": "Test",
-  "description": "Test",
-  "version": "0.0.0",
+  "name": "Vento v1",
+  "description": "Your Friend and Helper",
+  "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"

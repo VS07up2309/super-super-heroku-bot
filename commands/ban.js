@@ -4,6 +4,12 @@ module.exports = {
 	cooldown: 3,
 	description: 'ban someone',
 	execute(message) {
+	
+		if (!message.member.hasPermission("BAN_MEMBERS")) {
+    message.reply('Keine Berechtigung zum Bannen du lappen :joy:')
+    return;
+  }
+		
 		const user = message.mentions.users.first();
      // If we have a user mentioned
      if (user) {

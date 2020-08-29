@@ -8,8 +8,8 @@ const acceptedReplies = ['stein', 'papier', 'schere'];
         const result = acceptedReplies[random];
 
 	const choice = args[0];
-        if (!choice) return message.channel.send(`How to play: \`${prefix}rps <rock|paper|scissors>\``);
-        if (!acceptedReplies.includes(choice)) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
+        if (!choice) return message.channel.send(`How to play: \`${prefix}stp <stein|papier|schere>\``);
+        if (!acceptedReplies.includes(choice)) return message.channel.send(`Nur das wird akzeptiert: \`${acceptedReplies.join(', ')}\``);
         
         
         console.log('Bot Result:', result);
@@ -17,19 +17,19 @@ const acceptedReplies = ['stein', 'papier', 'schere'];
         
         switch (choice) {
             case 'stein': {
-                if (result === 'papier') return message.reply('I won!');
-                else return message.reply('You won!');
+                if (result === 'papier') return message.reply('Ich hab gewonnen!');
+                else return message.reply('Du gewinnst');
             }
             case 'papier': {
-                if (result === 'schere') return message.reply('I won!');
-                else return message.reply('You won!');        
+                if (result === 'schere') return message.reply('Ich hab gewonnen!');
+                else return message.reply('Du gewinnst!');        
             }
             case 'schere': {
-                if (result === 'stein') return message.reply('I won!');
-                else return message.reply('You won!');
+                if (result === 'stein') return message.reply('Ich hab gewonnen!');
+                else return message.reply('Du gewinnst!');
             }
             default: {
-                return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
+                return message.channel.send(`Nur diese Argumente werden akzeptiert: \`${acceptedReplies.join(', ')}\``);
             }
         }
     }

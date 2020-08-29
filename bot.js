@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const chalk = require('chalk');
+
 
 const Discord = require('discord.js');
 

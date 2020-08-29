@@ -31,5 +31,5 @@ const acceptedReplies = ['rock', 'paper', 'scissors'];
             }
         }
     }
-}
+
 };

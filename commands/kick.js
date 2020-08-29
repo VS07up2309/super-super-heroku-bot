@@ -5,7 +5,11 @@ module.exports = {
 	cooldown: 3,
 	description: 'Kick someone',
 	execute(message) {
-		const user = message.mentions.users.first();
+		if (!message.member.hasPermission("KICK_MEMBERS")) {
+    message.reply('Keine Berechtigung zum Kicken...')
+    return;
+  }
+const user = message.mentions.users.first();
      // If we have a user mentioned
      if (user) {
        // Now we get the member from the user

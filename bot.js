@@ -55,18 +55,18 @@ client.on('message', message =>
 		'dm')
 	{
 		return message.reply(
-			'I can\'t execute that command inside DMs!'
+			'Ich kann diesen befehl nicht in den DMs ausführen!'
 		);
 	}
 	if (command.args && !args
 		.length)
 	{
 		let reply =
-			`You didn't provide any arguments, ${message.author}!`;
+			`Du hast nicht die richtigen bzw keine argumente angegeben, ${message.author}!`;
 		if (command.usage)
 		{
 			reply +=
-				`\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+				`\nDie korrekte Benutzung währe: \`${prefix}${command.name} ${command.usage}\``;
 		}
 		return message.channel
 			.send(reply);
@@ -101,7 +101,7 @@ client.on('message', message =>
 				now) / 1000;
 			return message
 				.reply(
-					`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`
+					`Bitte warte noch ${timeLeft.toFixed(1)} sekunde(n) bis du den \`${command.name}\` wiederbenutzen kannst.`
 				);
 		}
 	}
@@ -120,7 +120,7 @@ client.on('message', message =>
 	{
 		console.error(error);
 		message.reply(
-			'there was an error trying to execute that command!'
+			'Es gab einen Fehler beim Ausführen des Befehls. Kontaktiere bitte den programmierer des bots.'
 		);
 	}
 });

@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 
 var config = new Object();
 config.prefix = "!"
-
+const prefix = require('./prefix.json')
 const client = new Discord.Client();
 
 client.commands = new Discord.Collection();

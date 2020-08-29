@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 
 var config = new Object();
 config.prefix = "!"
-const prefix = require('./prefix.json')
+
 const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
@@ -29,9 +29,9 @@ client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-	const args = message.content.slice(prefix.length).trim().split(/ +/);
+	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
 	
 	const command = client.commands.get(commandName)

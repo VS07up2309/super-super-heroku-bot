@@ -1,5 +1,6 @@
 module.exports = {
 	name: 'kick',
+	usage: '<user>',
 	guildOnly: true,
 	cooldown: 3,
 	description: 'Kick someone',

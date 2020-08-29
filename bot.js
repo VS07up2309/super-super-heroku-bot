@@ -1,5 +1,5 @@
 const fs = require('fs');
-const moment = require('moment');
+
 const chalk = require('chalk');
 
 const Discord = require('discord.js');

@@ -9,6 +9,9 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 const cooldowns = new Discord.Collection();
 //aliases
 
+//chalk themes
+const error = chalk.bold.red;
+const warning = chalk.keyword('orange');
 //command handler
 for (const file of commandFiles)
 {

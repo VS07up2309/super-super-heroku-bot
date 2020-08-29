@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'stp',
-	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
+	description: 'Schere stein papier.',
 	execute(message, args) {
 const acceptedReplies = ['stein', 'papier', 'schere'];
         const random = Math.floor((Math.random() * acceptedReplies.length));

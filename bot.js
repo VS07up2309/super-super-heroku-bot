@@ -7,7 +7,9 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const cooldowns = new Discord.Collection();
+//aliases
 
+//command handler
 for (const file of commandFiles)
 {
 	const command = require(`./commands/${file}`);
@@ -17,7 +19,7 @@ for (const file of commandFiles)
 }
 client.on('ready', () =>
 {
-	console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
+	console.log(chalk.blue(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`));
 	client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
 });
 client.on('message', message =>

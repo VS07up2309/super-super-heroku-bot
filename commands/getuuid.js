@@ -8,13 +8,10 @@ module.exports = {
     if (args[0] === 'foo') {
 			return message.channel.send('bar');
 		}
-    getuuid();
 	    
-	    
-        function getuuid() {
-            MinecraftAPI.uuidForName('${args}')
+            MinecraftAPI.uuidForName('${args}');
               .then(uuid => console.log(uuid))
                 .catch(err => console.log(err))
-        }
+        
     }
 };

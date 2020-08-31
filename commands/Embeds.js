@@ -7,5 +7,5 @@ module.exports = {
           .setDescription('Lmaooooo');
   }
   
-  channel.send(test);
+  message.channel.send(test);
  };

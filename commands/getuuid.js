@@ -9,7 +9,7 @@ module.exports = {
 			return message.channel.send('bar');
 		}
 	    
-            MinecraftAPI.uuidForName('${args}')
+            MinecraftAPI.uuidForName(args)
               .then(uuid => console.log(uuid))
                 .catch(err => console.log(err))
         

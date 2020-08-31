@@ -3,11 +3,10 @@ module.exports = {
    execute(message) {
      const Discord = require("discord.js");
       
-      var embed = new Discord.MessageEmbed()
-    .setAuthor(message.author.username)
-    .setDescription("Usuario rikolino.")
+      var embed = new Discord.MessageEmbed() 
+    .setDescription("Du bist ein dummer hund vento.")
     .setColor("#115863")
-    .addField("Usuario", '${message.author.username}#${message.author.discriminator}')
+    .addField("Usuario", message.author.username)
     .addField("ID", message.author.id)
     .addField("Creación", message.author.createdAt);
 

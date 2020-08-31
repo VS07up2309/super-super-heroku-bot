@@ -1,6 +1,6 @@
 module.exports = {
    name: 'embed',
-   execute(message) {
+   execute(message, channel) {
      const test = new Discord.MessageEmbed();
            test.setColor = ('#00FDFF');
            test.setTitle = ('Test');

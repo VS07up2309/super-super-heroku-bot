@@ -14,3 +14,5 @@ module.exports = {
               .then(uuid => console.log(uuid))
                 .catch(err => console.log(err))
         }
+    }
+};

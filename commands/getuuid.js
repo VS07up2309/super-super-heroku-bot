@@ -10,7 +10,7 @@ module.exports = {
 		}
     
         function getuuid() {
-            MinecraftAPI.uuidForName(args)
+            MinecraftAPI.uuidForName('${args}')
               .then(uuid => console.log(uuid))
                 .catch(err => console.log(err))
         }

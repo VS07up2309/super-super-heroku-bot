@@ -6,4 +6,6 @@ module.exports = {
           .setTitle('Test')
           .setDescription('Lmaooooo');
   }
+  
+  channel.send(test);
  };

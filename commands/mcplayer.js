@@ -16,6 +16,7 @@ module.exports = {
 	  
 	MinecraftAPI.uuidForName(args)
               .then(uuid => player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100'))
+	  .then(uuid => message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100'))
               .catch(err => console.log(err));
       
       

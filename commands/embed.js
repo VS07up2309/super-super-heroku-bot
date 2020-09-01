@@ -1,5 +1,6 @@
 module.exports = {
-   name: 'embed',
+   name: 'id',
+   description: 'name/id vom ausführer anzeigen',
    execute(message) {
      const Discord = require("discord.js");
       

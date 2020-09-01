@@ -7,24 +7,22 @@ module.exports = {
       if (args[0] === 'foo') {
 			return message.channel.send('bar');
 		}
-    var player = new Discord.MessageEmbed()
+    
 	
 	  
 	  	async function foo() {
     try{
         const uuid = await MinecraftAPI.uuidForName(args);
-       
-			player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
-			player.addField('Username', 'Ingamename: ' + (args));
-                	player.setColor('#0099ff');
     } catch(err){
         console.error(err);
     }
 }
 	  
 	  
-	  
-	  
+	var player = new Discord.MessageEmbed()  
+	                .setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
+			.addField('Username', 'Ingamename: ' + (args))
+                	.setColor('#0099ff');  
 	 
       
       

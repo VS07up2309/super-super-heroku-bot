@@ -16,6 +16,6 @@ module.exports = {
                    .setColor('#0099ff')
                    .setTimestamp();
                    
-    channel.send(player);
+    message.channel.send(player);
   }
 };

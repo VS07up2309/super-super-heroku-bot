@@ -12,7 +12,7 @@ module.exports = {
       
       
       var player = new Discord.MessageEmbed()
-                   .setThumbnail('https://crafatar.com/avatars/' + (uuid |) + '?size=100')
+                   .setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
                    .setColor('#0099ff')
                    .setTimestamp();
                    

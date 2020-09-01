@@ -2,7 +2,7 @@ module.exports = {
   name: 'player',
   description: 'minecraft player info',
   execute(message, args, channel) {
-      const MinecraftAPI = require('minecraft-api');
+      const mojangjs = require('mojangjs');
       const Discord = require('discord.js');
       if (args[0] === 'foo') {
 			return message.channel.send('bar');
@@ -14,10 +14,13 @@ module.exports = {
                 .setColor('#0099ff');
 	  
 	  
-	MinecraftAPI.uuidForName(args)
-              .then(uuid => player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100'))
-	  .then(uuid => message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100'))
-              .catch(err => console.log(err));
+	  	mojangjs.getUUID(args).then(uuid => {
+    		console.log(uuid);
+		player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
+		.then(uuid => message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100');
+		}).catch(err => console.error(err));
+	  
+	
       
       
  

@@ -1,7 +1,7 @@
 module.exports = {
   name: 'player',
   description: 'minecraft player info',
-  execute(message, args, channel) {
+  execute(message, args, client) {
       const mojangjs = require('mojangjs');
       const Discord = require('discord.js');
       if (args[0] === 'foo') {

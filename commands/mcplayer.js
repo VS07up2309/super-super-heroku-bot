@@ -13,18 +13,12 @@ module.exports = {
 	  	mojangjs.getUUID(args).then(uuid => {
     			console.log(args);
 			console.log(uuid);
-			message.channel.send({embed: {
-  			color: 3447003,
-  			thumbnail("https://crafatar.com/avatars/' + (uuid) + '?size=100"),
-			field('Username', 'Ingamename: ' + (args))
-			}});
 			
-			//player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
-			//player.addField('Username', 'Ingamename: ' + (args));
-                	//player.setColor('#0099ff');
 		}).catch(err => console.error(err));
 	  
-	
+	player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
+			player.addField('Username', 'Ingamename: ' + (args));
+                	player.setColor('#0099ff');
       
       
  

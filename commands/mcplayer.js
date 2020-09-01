@@ -8,13 +8,15 @@ module.exports = {
 			return message.channel.send('bar');
 		}
     
-	const uuid = MinecraftAPI.uuidForName(args);
+	MinecraftAPI.uuidForName(args)
+              .then(uuid => const playerid = uuid)
+              .catch(err => console.log(err));
       
       
       var player = new Discord.MessageEmbed()
 		.setTitle('Minecraft Info')
       		.addField('Username', 'Ingamename: ${args}')
-      		.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
+      		.setThumbnail('https://crafatar.com/avatars/' + (playerid) + '?size=100')
                 .setColor('#0099ff');
                    
     message.channel.send(player);

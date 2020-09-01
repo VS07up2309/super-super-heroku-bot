@@ -1,7 +1,7 @@
 module.exports = {
   name: 'player',
   description: 'minecraft player info',
-  execute(message, args, client) {
+  execute(message, args) {
       const minecraftAPI = require('minecraft-api');
       const Discord = require('discord.js');
       if (args[0] === 'foo') {

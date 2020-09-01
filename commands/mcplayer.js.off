@@ -16,7 +16,8 @@ module.exports = {
 		async function foo() {
     try{
         const uuid = await MinecraftAPI.uuidForName(args);
-	player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
+	message.channel.send(uuid);
+	player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
     } catch(err){
         console.error(err);
     }

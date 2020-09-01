@@ -1,7 +1,7 @@
 module.exports = {
   name: 'player',
   description: 'minecraft player info',
-  execute(message, args) {
+  execute(message, args, channel) {
       const MinecraftAPI = require('minecraft-api');
       const Discord = require('discord.js');
       if (args[0] === 'foo') {
@@ -16,6 +16,6 @@ module.exports = {
                    .setColor('#0099ff')
                    .setTimestamp();
                    
-    channel.send(exampleEmbed);
+    channel.send(player);
   }
 };

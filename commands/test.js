@@ -6,7 +6,7 @@ module.exports = {
     if (args[0] === 'foo') {
 			return message.channel.send('bar');
 		}
-    
+    var id = new Object();
     MinecraftAPI.uuidForName(args)
     .then(uuid => uuid = id)
     .catch(err => console.log(err))

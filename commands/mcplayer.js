@@ -10,19 +10,22 @@ module.exports = {
     
 	
 	  
-	  	mojangjs.getUUID(args).then(uuid => {
-    			console.log(args);
-			console.log(uuid);
-			
-		}).catch(err => console.error(err));
-	  
-	  
-	  
-	  
-	  var player = new Discord.MessageEmbed()
+	  	async function foo() {
+    try{
+        const uuid = await MinecraftAPI.uuidForName(args);
+        var player = new Discord.MessageEmbed()
 			.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
 			.addField('Username', 'Ingamename: ' + (args))
                 	.setColor('#0099ff');
+    } catch(err){
+        console.error(err);
+    }
+}
+	  
+	  
+	  
+	  
+	 
       
       
  

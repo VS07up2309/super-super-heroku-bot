@@ -15,7 +15,7 @@ module.exports = {
 			console.log(uuid);
 			message.channel.send({embed: {
   			color: 3447003,
-  			thumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100'),
+  			thumbnail("https://crafatar.com/avatars/' + (uuid) + '?size=100"),
 			field('Username', 'Ingamename: ' + (args))
 			}});
 			

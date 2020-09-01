@@ -3,7 +3,7 @@ module.exports = {
   description: 'minecraft player info',
   execute(message, args) {
       const MinecraftAPI = require('minecraft-api');
-      
+      const Discord = require('discord.js');
       if (args[0] === 'foo') {
 			return message.channel.send('bar');
 		}

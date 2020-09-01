@@ -18,7 +18,7 @@ module.exports = {
 	  
 	  const uuid = mojangjs.getUUID(args);
 	  message.channel.send(uuid);
-	  message.channel.send(mojangjs.getUUID(args);
+	  message.channel.send(mojangjs.getUUID(args));
 	  
 	player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
 			player.addField('Username', 'Ingamename: ' + (args));

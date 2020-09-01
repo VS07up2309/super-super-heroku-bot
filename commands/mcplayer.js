@@ -10,7 +10,7 @@ module.exports = {
     
 	  var player = new Discord.MessageEmbed()
 		.setTitle('Minecraft Info')
-      		.addField('Username', 'Ingamename: ${args}')
+      		.addField('Username', 'Ingamename: ' + (args))
                 .setColor('#0099ff');
 	  
 	  

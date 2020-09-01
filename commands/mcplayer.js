@@ -17,7 +17,7 @@ module.exports = {
 	  	mojangjs.getUUID(args).then(uuid => {
     		console.log(uuid);
 		player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
-		.then(uuid => message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100');
+		message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100');
 		}).catch(err => console.error(err));
 	  
 	

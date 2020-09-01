@@ -8,16 +8,14 @@ module.exports = {
 			return message.channel.send('bar');
 		}
     
-	  var player = new Discord.MessageEmbed()
-		.setTitle('Minecraft Info')
-      		.addField('Username', 'Ingamename: ' + (args))
-                .setColor('#0099ff');
-	  
 	  
 	  	mojangjs.getUUID(args).then(uuid => {
-    		console.log(uuid);
-		player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
-		message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100');
+    			console.log(uuid);
+			message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100');
+			var player = new Discord.MessageEmbed()
+			.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
+			.addField('Username', 'Ingamename: ' + (args))
+                	.setColor('#0099ff');
 		}).catch(err => console.error(err));
 	  
 	

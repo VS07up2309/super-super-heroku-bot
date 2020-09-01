@@ -8,9 +8,7 @@ module.exports = {
 			return message.channel.send('bar');
 		}
     
-    MinecraftAPI.uuidForName(args)
-              .then(uuid => message.channel.send(uuid))
-              .catch(err => console.log(err));
+	const uuid = MinecraftAPI.uuidForName(args);
       
       
       var player = new Discord.MessageEmbed()

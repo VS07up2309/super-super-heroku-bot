@@ -11,8 +11,8 @@ module.exports = {
 	  var player = new Discord.MessageEmbed()
 	  
 	  	mojangjs.getUUID(args).then(uuid => {
-    			console.log(uuid);
-			message.channel.send('https://crafatar.com/avatars/' + (uuid) + '?size=100');
+    			console.log(args);
+			console.log(uuid);
 			player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
 			player.addField('Username', 'Ingamename: ' + (args));
                 	player.setColor('#0099ff');

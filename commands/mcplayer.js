@@ -8,16 +8,18 @@ module.exports = {
 			return message.channel.send('bar');
 		}
     
+	  var player = new Discord.MessageEmbed()
+		.setTitle('Minecraft Info')
+      		.addField('Username', 'Ingamename: ${args}')
+                .setColor('#0099ff');
+	  
+	  
 	MinecraftAPI.uuidForName(args)
-              .then(uuid => const playerid = uuid)
+              .then(uuid => player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100'))
               .catch(err => console.log(err));
       
       
-      var player = new Discord.MessageEmbed()
-		.setTitle('Minecraft Info')
-      		.addField('Username', 'Ingamename: ${args}')
-      		.setThumbnail('https://crafatar.com/avatars/' + (playerid) + '?size=100')
-                .setColor('#0099ff');
+ 
                    
     message.channel.send(player);
   }

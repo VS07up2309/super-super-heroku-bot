@@ -2,7 +2,7 @@ module.exports = {
   name: 'player',
   description: 'minecraft player info',
   execute(message, args, client) {
-      const mojangjs = require('mojangjs');
+      const minecraftAPI = require('minecraft-api');
       const Discord = require('discord.js');
       if (args[0] === 'foo') {
 			return message.channel.send('bar');

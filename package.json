@@ -15,6 +15,7 @@
     "redis-server": "1.2.2",
     "minecraft-api": "0.0.3",
     "hypixel-api": "^1.0.0",
-    "moment": "^2.19.2"
+    "moment": "^2.19.2",
+    "mojangjs": "2.0.3"
   }
 }

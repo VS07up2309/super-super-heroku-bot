@@ -16,6 +16,8 @@ module.exports = {
 			
 		}).catch(err => console.error(err));
 	  
+	  const uuid = mojangjs.getUUID(args);
+	  
 	player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
 			player.addField('Username', 'Ingamename: ' + (args));
                 	player.setColor('#0099ff');

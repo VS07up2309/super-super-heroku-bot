@@ -13,13 +13,9 @@ module.exports = {
 			.addField('Username', 'Ingamename: ' + (args))
                 	.setColor('#0099ff');
 	  	
-		async function foo() {
-    try{
-        const uuid = await MinecraftAPI.uuidForName(args);
-	message.channel.send(uuid);
-	player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
-    } catch(err){
-        console.error(err);
+		MinecraftAPI.uuidForName(args)
+              .then(uuid => player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100'))
+              .catch(err => console.log(err))
     }
 }
 	  

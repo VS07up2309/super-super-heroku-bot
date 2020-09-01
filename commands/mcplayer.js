@@ -14,9 +14,9 @@ module.exports = {
                 	.setColor('#0099ff');
 	  	
 		MinecraftAPI.uuidForName(args)
+	      .then(uuid => console.log(uuid))
               .then(uuid => player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100'))
 	      //.then(uuid => message.channel.send(uuid))
-	      .then(uuid => console.log(uuid))
               .catch(err => console.log(err))
     
 

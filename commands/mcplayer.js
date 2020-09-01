@@ -12,8 +12,10 @@ module.exports = {
       
       
       var player = new Discord.MessageEmbed()
-                   .setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
-                   .setColor('#0099ff');
+		.setTitle('Minecraft Info')
+      		.addField('Username', 'Ingamename: ${args}')
+      		.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
+                .setColor('#0099ff');
                    
     message.channel.send(player);
   }

@@ -8,21 +8,17 @@ module.exports = {
 			return message.channel.send('bar');
 		}
     
-	  var player = new Discord.MessageEmbed()
+	
 	  
 	  	mojangjs.getUUID(args).then(uuid => {
     			console.log(args);
 			console.log(uuid);
 			
 		}).catch(err => console.error(err));
-	  
-	  const uuid = mojangjs.getUUID(args);
-	  message.channel.send(uuid);
-	  message.channel.send(mojangjs.getUUID(args));
-	  
-	player.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100');
-			player.addField('Username', 'Ingamename: ' + (args));
-                	player.setColor('#0099ff');
+	  var player = new Discord.MessageEmbed()
+			.setThumbnail('https://crafatar.com/avatars/' + (uuid) + '?size=100')
+			.addField('Username', 'Ingamename: ' + (args))
+                	.setColor('#0099ff');
       
       
  

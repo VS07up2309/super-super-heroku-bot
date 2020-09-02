@@ -9,6 +9,10 @@ module.exports = {
     var id = new Object();
     MinecraftAPI.uuidForName(args)
     .then(uuid => message.channel.send(uuid))
+    .then message.channel.send({embed: {
+  color: 3447003,
+  description: "A very simple Embed!"
+}})
     .catch(err => console.log(err))
     
     

@@ -8,10 +8,10 @@ module.exports = {
 		}
     var id = new Object();
     MinecraftAPI.uuidForName(args)
-    .then(uuid => uuid = id)
+    .then(uuid => uuid = id.uuid)
     .catch(err => console.log(err))
     
-    message.channel.send(id);
+    message.channel.send(id.uuid);
     
     }
     };

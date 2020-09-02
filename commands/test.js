@@ -1,7 +1,8 @@
 module.exports = {
   name: 'test',
   execute(message, args, channel) {
-    const MinecraftAPI = require('minecraft-api');
+    const Discord = require('discord.js');
+	  const MinecraftAPI = require('minecraft-api');
     const info = new Discord.MessageEmbed()
     if (args[0] === 'foo') {
 			return message.channel.send('bar');

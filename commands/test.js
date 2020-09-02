@@ -1,6 +1,6 @@
 module.exports = {
   name: 'test',
-  execute(message, args) {
+  execute(message, args, channel) {
     const MinecraftAPI = require('minecraft-api');
     
     if (args[0] === 'foo') {

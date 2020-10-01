@@ -3,5 +3,11 @@
   "description": "A Node.js app using Discord.js",
   "repository": "https://github.com/VS07up2309/super-super-heroku-bot",
   "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["node", "discord", "bot"]
+  "keywords": ["node", "discord", "bot"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "token for the bot",
+      "Value": "some token"
+    }
+  }
 }

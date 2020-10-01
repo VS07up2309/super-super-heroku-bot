@@ -1,5 +1,7 @@
-# Discord Bot running on Heroku (24/7 solution)
+# Heroku Discord Bot
 
 [![Build Status](https://travis-ci.com/VS07up2309/super-super-heroku-bot.svg?branch=master)](https://travis-ci.com/VS07up2309/super-super-heroku-bot)
 
-Its pretty easy :D
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Click on the "Deploy to heroku" button to deploy the bot to heroku. You are allowed to fork.

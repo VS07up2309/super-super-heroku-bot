@@ -5,7 +5,7 @@
   "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": ["node", "discord", "bot"],
   "env": {
-    "BOT_TOKEN": {
+    "DISCORD_SECRET": {
       "description": "token for the bot",
       "Value": "some token"
     }

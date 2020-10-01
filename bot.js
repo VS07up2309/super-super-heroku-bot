@@ -1,10 +1,9 @@
 
+const config = require('./config.json');
 
 const fs = require('fs');
 const chalk = require('chalk');
 const Discord = require('discord.js');
-var config = new Object();
-config.prefix = "!"
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));

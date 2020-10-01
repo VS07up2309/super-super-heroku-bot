@@ -1,0 +1,7 @@
+{
+  "name": "Heroku Discord Bot",
+  "description": "A Node.js app using Discord.js",
+  "repository": "https://github.com/VS07up2309/super-super-heroku-bot",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "discord", "bot"]
+}

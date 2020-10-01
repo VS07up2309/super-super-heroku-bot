@@ -76,4 +76,4 @@ client.on('message', message =>
 	}
 });
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.TOKEN);
+client.login(process.env.DISCORD_SECRET);

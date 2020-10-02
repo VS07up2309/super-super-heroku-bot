@@ -6,7 +6,7 @@ module.exports = {
 	execute(message) {
 	
 		if (!message.member.hasPermission("BAN_MEMBERS")) {
-    message.reply('Keine Berechtigung zum Bannen du lappen :joy:')
+    message.reply('Keine Berechtigung zum Bannen du lappen :joy:. Bist wahrscheinlich son scheiß vegetarier:joy:')
     return;
   }
 		
@@ -18,7 +18,7 @@ module.exports = {
        // If the member is in the guild
        if (member) {
          /**
-          * Kick the member
+          * Ban the member
           * Make sure you run this on a member, not a user!
           * There are big differences between a user and a member
           */
